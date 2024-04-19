@@ -1,4 +1,4 @@
-exec { 'install Flask via pip3':
-  command => 'pip3 install flask',
-  path    => ['/usr/bin/'],
+package { 'flask':
+  ensure => '2.1.0',
+  provider    => 'pip',
 }
