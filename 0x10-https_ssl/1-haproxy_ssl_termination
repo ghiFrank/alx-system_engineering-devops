@@ -41,11 +41,11 @@ frontend clickviral-frontend
         default_backend clickviral-backend
 
 frontend clickviral-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/alx-student.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.alx-student.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend clickviral-backend
 
 backend clickviral-backend
         balance roundrobin
-        server 531194-web-01 54.144.141.76 check
-        server 531194-web-02 54.242.155.161 check
+        server 531194-web-01 54.144.141.76:80 check
+        server 531194-web-02 54.242.155.161:80 check
