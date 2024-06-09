@@ -3,23 +3,36 @@ Postmortem Report: Outage of E-Commerce Website Checkout Service
 
 Issue Summary
 
-Duration: June 3, 2024, 08:30 AM - 10:15 AM (UTC)
+Duration: 
 
-Impact: The checkout service of our e-commerce website was down, preventing users from completing their purchases. Approximately 60% of users experienced issues with processing payments, leading to a significant drop in completed transactions and potential revenue loss.
+June 3, 2024, 08:30 AM - 10:15 AM (UTC)
+
+Impact: 
+
+The checkout service of our e-commerce website was down, preventing users from completing their purchases. Approximately 60% of users experienced issues with processing payments, leading to a significant drop in completed transactions and potential revenue loss.
 
 Root Cause: A misconfiguration in the payment gateway API credentials following a routine update.
 
 Timeline
 
 08:30 AM: 🚨 Issue detected by a monitoring alert indicating a sudden drop in successful transactions.
+
 08:35 AM: 🕵️ On-call engineer begins investigation by checking server health and logs.
+
 08:45 AM: 💬 Customer complaints start coming in via support channels, confirming checkout issues.
+
 09:00 AM: 🤔 Initial assumption: potential server overload or database issues due to high traffic.
+
 09:15 AM: 🛑 Misleading path: Restarted the database server and web servers without any improvement.
+
 09:30 AM: 📈 Escalation to the DevOps team to inspect load balancers and network configurations.
+
 09:45 AM: 💡 Realization that recent update could have affected external integrations; focus shifts to payment gateway.
+
 10:00 AM: 🔍 Confirmed that payment gateway API credentials were incorrectly configured during the update.
+
 10:05 AM: 🔧 Correct credentials restored.
+
 10:15 AM: ✅ Checkout service fully operational and monitoring confirms normal transaction levels.
 
 Root Cause and Resolution
