@@ -18,7 +18,7 @@ rm -rf AirBnB_clone_v*
 # Clone My Repository
 git clone https://github.com/ghiFrank/AirBnB_clone_v2.git
 git clone https://github.com/ghiFrank/AirBnB_clone_v3.git
-git clone https://github.com/ghiFrank/AirBnB_clone_v4.git
+git clone https://github.com/Atyq96/AirBnB_clone_v4.git
 # Change Directory
 cd AirBnB_clone_v2
 # Switch Branches
